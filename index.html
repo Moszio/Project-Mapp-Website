@@ -6,24 +6,44 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Project-Mapp</title>
  <link rel="stylesheet" href="./main.css">
- <script src="./index.js"></script>
+ <script defer src="./index.js"></script>
 </head>
 <body>
  <header>
-    <h1>Hello world!</h1>
-
+   <div class="header-container">
+    <h1 class="page-header" >Hello world!</h1>
+      <h3>Welcome to Country tracker!</h3>
+      <h4>Country tracker will allow you to keep track of the countries you traveled to.<br> You can add and remove destination. Find fun facts about the countries you visited. Add comments and rate your experience.</h4>
+      <div id="down"><a href="#down">Scroll Down</a></div>
+   </div>
  </header>
  <main>
-  <h3>List of Countries visited</h3>
-  <form>
-   <label for="countries-list">List of countries:</label>
-   <input type="button" name="submit"/> 
-   <label for="add rating" name="rating">Rating</label>
-   <input type="text"/>
-  </form>
-  <ul>
 
-  </ul>
+   <form class="form-div">
+      <h3>List of Countries visited</h3>
+      <label for="add-country" name="country">Country:</label><br>
+      <input type="text" name="country"/><br>
+      <label for="add-comment" name="comment">Rating:</label><br>
+      <input type="text" name="rating"/><br>
+      <label for="add rating" name="rating">Comment:</label><br>
+      <input type="text" name="comment"/><br>
+      <label for="country-list"></label><br>
+      <input type="submit" id="add" value="+" placeholder="Add"/>
+      <label for="country-list"></label>
+      <input type="button" id="remove" value="-" placeholder="Add"/> <br>
+   </form>
+
+
+
+ <div  id="img-container">
+   <h1 id="country-select">No selcted country</h1>
+   <select name="" id="img-select"> 
+   </select><br>
+   <img src="" alt=""  id="comments" class="hidden">
+   <ul id="fun-fact" class="display-non">
+
+   </ul>
+ </div>
  </main>
 <footer>
  <h4></h4>
