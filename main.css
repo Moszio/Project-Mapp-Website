@@ -1,122 +1,144 @@
+*   {
+    font-family:Arial, Helvetica, sans-serif;
+}
 
 html {
- scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/A_large_blank_world_map_with_oceans_marked_in_blue.svg/4500px-A_large_blank_world_map_with_oceans_marked_in_blue.svg.png)
 }
 
 
 header{
-height: 100%;
-width: 100%;
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/A_large_blank_world_map_with_oceans_marked_in_blue.svg/4500px-A_large_blank_world_map_with_oceans_marked_in_blue.svg.png);
-background-size: cover;
-z-index: 20;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-opacity: 50%;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
 .header-container {
- width: 50%;
- text-align: center;
- opacity: none;
+    width: 50%;
+    text-align: center;
+    opacity: none;
 }
 
+header h1 {
+    font-weight: bold;
+}
 
 header h3{
- margin: 200px 0 0 0;
+    margin: 200px 0 0 0;  
 
 }
 
 
 header h3, header h4 {
- z-index: 40;
- font-size: large;
- display: flex;
- justify-content: center;
-
+    z-index: 40;
+    font-size: large;
+    display: flex;
+    justify-content: center;
 }
+
+.style-div {
+    height: 200px;
+    background: rgba(231, 239, 255, 0.4)
+}
+
 
 
 .page-header {
- text-align: center;
+    text-align: center;
+    margin-top: 10%;
 }
 
 
- a {
-  text-decoration: none;
-  color: black;
- } 
+
+a {
+    text-decoration: none;
+    color: black;
+    border: none;
+    padding: 9px 18px 9px 18px; 
+    margin: 15px 0 0 0 ;
+    font-weight: bolder;
+    border-radius: 5px;
+    font-size: 12px;
+    box-shadow: 1px 1px 3px 1px lightslategray;
+} 
  
- #down {
-  margin-top: 10px;
-  padding-bottom: 25%;
- } 
+#down {
+    
+    margin-top: 15%;
+    padding-bottom: 25%;
+} 
 
 
 main{
- height: 60%;
- display: flex;
- justify-content: space-evenly;
- flex-direction:row;
+    background-color: #fff;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction:row;
 }
 
 
 
 #img-container {
- height: 520px;
- width: 520px;
+    height: 520px;
+    width: 520px;
 }
 
 img{
- width: 400px;
- height: 400px;
- padding: 10px;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
  
 }
 
 footer {
- background-color: #d4e9fb;
- height: 40%;
+    height: 60%;   
 }
 
 
 input {
- background-color:dimgrey;
- color: #fff;
- border: none;
- padding: 18px 36px 18px 36px; 
- margin: 30px 0 0 0 ;
- font-weight: bolder;
- border-radius: 5px;
- font-size: 18px;
+    background-color:rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 18px 36px 18px 36px; 
+    margin: 0 0 40px 0 ;
+    font-weight: bolder;
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 1px 1px 3px 1px lightslategray;
 }
 
+
 form {
- text-align: center;
+    text-align: center;
+
 }
 
 #img-container {
- width: 420px;
- height: 420px;
- text-align: center;
+    width: 420px;
+    height: 420px;
+    text-align: center;
 }
 #img-select {
- width: 420px;
- text-align: center;
- padding: 10px;
- margin: 5px;
+    width: 420px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
 }
 
 
-form #add {
- cursor: pointer;
+form #add, #remove, #update {
+    cursor: pointer;
+    color: grey;
 }
-form #remove {
- cursor: pointer;
-}
+
 
 .hidden {
- display: none;
+    display: none;
 }
