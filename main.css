@@ -44,7 +44,7 @@ header h3, header h4 {
 
 .style-div {
     height: 200px;
-    background: rgba(231, 239, 255, 0.4)
+    background: rgba(255, 255, 255, 0.4)
 }
 
 
@@ -56,7 +56,7 @@ header h3, header h4 {
 
 
 
-a {
+header a {
     text-decoration: none;
     color: black;
     border: none;
@@ -76,7 +76,7 @@ a {
 
 
 main{
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.896);
     height: 80%;
     display: flex;
     justify-content: space-evenly;
@@ -141,4 +141,19 @@ form #add, #remove, #update {
 
 .hidden {
     display: none;
+}
+
+#fun-fact {
+    inline-size: 93%;
+    overflow:hidden;
+    color: black;
+    border: none;
+    padding: 9px 18px 9px 18px; 
+    margin: 15px 0 0 0 ;
+    font-weight: bolder;
+    border-radius: 5px;
+    font-size: 17   px;
+    box-shadow: 1px 1px 3px 1px lightslategray;
+    background: rgba(255, 255, 255, 0.742);
+    list-style-type: none;
 }

@@ -1,28 +1,22 @@
 {
   "visited": [
     {
+      "country": "Jamaica",
+      "comment": "",
+      "rating": "",
+      "id": 1
+    },
+    {
       "country": "Russia",
       "comment": "Big country",
       "rating": "2",
+      "id": 2
+    },
+    {
+      "country": "Hungary",
+      "comment": "Home",
+      "rating": "10",
       "id": 3
-    },
-    {
-      "country": "Hungary",
-      "comment": "asdasd",
-      "rating": "10",
-      "id": 4
-    },
-    {
-      "country": "China",
-      "comment": "This is where my wife grew up",
-      "rating": "10",
-      "id": 5
-    },
-    {
-      "country": "Hungary",
-      "comment": "aawetawe",
-      "rating": "10",
-      "id": 6
     }
   ]
 }

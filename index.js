@@ -26,10 +26,7 @@ const fetchLocalHost = () => {
  .then(res => res.json())
  .then(data => {
   cleanupSelected()
-  data.forEach(visited => {
-    commentsDisplay(visited)
-    displaySelectOption(visited)
-  })
+  data.forEach(visited => displaySelectOption(visited))
 })
 }
 
@@ -48,8 +45,9 @@ const postLocalHost = (country) => {
  })
  .then(res => res.json())
  .then(data => {
-  fetchLocalHost()
-  (console.log(data))})
+  fetchLocalHost();
+  (console.log(data))
+})
 }
 
 // Patch localhost 3000 edit the current comment or rating
@@ -92,9 +90,15 @@ const postImage = (post) => {
 // adding elements to the card with funfacts from Public Api
 const postFunFacts = (fact) => {
   const li = document.createElement(`li`)
+  const li2 = document.createElement(`li`)
+  const a = document.createElement(`a`)
   funFact.innerHTML = ""
-  li.innerHTML = fact.name.official
-  funFact.append(li)
+  li.innerHTML = `Borders: ` + fact.borders
+  li2.innerHTML = `Population: ` + fact.population
+  a.href = fact.maps.googleMaps
+  a.innerText = `Google Maps`
+  funFact.append(li, li2, a)
+  funFact.classList.remove(`hidden`)
 }
 // How to set a vaue to country name and have value of number too in order to delete and patch from local host
 const displaySelectOption = (text) => {
@@ -134,12 +138,6 @@ newCountryFormRemove.addEventListener(`click`, () => {
   const id = options[options.selectedIndex].id;
   deleteLocalHost(id)
 })
- 
-const commentsDisplay = (comment) => {
-  const p = document.createElement(`p`)
-  p.textContent = comment.comment
-  commentContainer.append(p)
-}
 
 
 
@@ -152,17 +150,8 @@ const cleanupSelected = () => {
   img.classList.add(`hidden`)
   const li = document.createElement(`li`)
   funFact.innerHTML = ""
+  funFact.classList.add(`hidden`)
 }
 
 
 
-
-/*
-
-const displayComment = (country) => {
-  let p = document.createElement(`p`)
-  p.textContent = country.comment
-  footerSec.append(p)
-
-}
-*/
