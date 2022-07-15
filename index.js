@@ -1,6 +1,6 @@
 //query Selectors and any additional variables
 const img = document.querySelector(`#comments`)
-const scrollDown = document.querySelector(`#down`)
+const scrollDownBox = document.querySelector(`#down`)
 const selectTab = document.querySelector(`#img-select`)
 const optionTab = document.querySelector(`option`)
 const funFact = document.querySelector(`#fun-fact`)
@@ -8,7 +8,10 @@ const newCountryFormAdd = document.querySelector(`.form-div`)
 const newCountryFormRemove = document.querySelector(`#remove`)
 //const countryUpdate = document.querySelector(`#update`)
 const commentContainer = document.querySelector(`#paragraph-comment`)
-
+const a = document.querySelector(`a`).href = `#down`
+const icons = document.querySelector(`.icons`) 
+const footerDiv = document.querySelector(`#footer`)
+const commentsDispla= document.querySelector(`#comments-display`)
 
 // select ID
 
@@ -29,9 +32,25 @@ const fetchLocalHost = () => {
  .then(res => res.json())
  .then(data => {
   cleanupSelected()
-  data.forEach(visited => {
-    displaySelectOption(visited)})
+  data.forEach(visit => {
+    displaySelectOption(visit)})
 })
+}
+
+/* This is to pin comments from countries to thhe website*/
+
+const createElement = (id) => {
+  let p = document.createElement(`p`)
+  p.textContent = id.comment
+  commentsDispla.innerHTML = ``
+  commentsDispla.append(p)
+  commentsDispla.classList.remove(`hidden`)
+}
+
+const fetchLocalHost2 = (id) => {
+ fetch(`http://localhost:3000/visited/${id}`)
+ .then(res => res.json())
+ .then(data => createElement(data))
 }
 
 
@@ -53,23 +72,7 @@ const postLocalHost = (country) => {
   (console.log(data))
 })
 }
-/*
-// Patch localhost 3000 edit the current comment or rating
-const patchLocalHost = (ratingEdit, commentEdit) => {
- fetch(`http://localhost:3000/visited/${id}`, {
-  method: "PATCH", 
-  headers: {
-   "Content-type": "application/json"
-  },
-  body: JSON.stringify({
-    rating: ratingEdit,
-    comment: commentEdit
-  })
- })
- .then(res => res.json())
- .then(data => console.log(data))
-}
-*/
+
 
 // delete from Localhost 3000 In order to refresh the list elements we need to call Get fetch request function.
 // since we are not using Promise line of code
@@ -86,13 +89,7 @@ const deleteLocalHost = (id) => {
   console.log(data)
 })
 }
-/*
-const displayCommentsSection = (commentParagraph) => {
-  let p = document.createElement(`p`)
-  p.innerText = commentParagraph.comment
-  commentContainer.append(p)
-}
-*/
+
 // adding image to the image element from public api
 const postImage = (post) => {
   let img = document.querySelector(`#comments`)
@@ -101,15 +98,15 @@ const postImage = (post) => {
 }
 // adding elements to the card with funfacts from Public Api
 const postFunFacts = (fact) => {
-  const li = document.createElement(`li`)
-  const li2 = document.createElement(`li`)
-  const a = document.createElement(`a`)
+  const h3CapitalCity = document.createElement(`h3`)
+  const liBorder = document.createElement(`li`)
+  const liPopulation = document.createElement(`li`)
+  let border = fact.borders
   funFact.innerHTML = ""
-  li.innerHTML = `Borders: ` + fact.borders
-  li2.innerHTML = `Population: ` + fact.population
-  a.href = fact.maps.googleMaps
-  a.innerText = `Google Maps`
-  funFact.append(li, li2, a)
+  h3CapitalCity.innerText = `Capital City: ` + fact.capital
+  border === undefined ? ` ` : liBorder.innerText =  `Border: ` + fact.borders
+  liPopulation.innerText  = `Population: ` + fact.population
+  funFact.append(h3CapitalCity, liBorder, liPopulation, )
   funFact.classList.remove(`hidden`)
 }
 // How to set a vaue to country name and have value of number too in order to delete and patch from local host
@@ -125,10 +122,13 @@ const displaySelectOption = (text) => {
 // eventlistener for selecting and connecting the api picture
   selectTab.addEventListener(`change`, (e) => {
   let option2 = e.target.value
+   const options = selectTab.options;
+  const id = options[options.selectedIndex].id;
   //selectId = e.target
   //console.log(selectId)
   fetchPublicApi(option2) 
-  //fetchLocalHost()
+  fetchLocalHost2(id)
+
  })
 
 
@@ -143,6 +143,7 @@ newCountryFormAdd.addEventListener(`submit`, (e) => {
 // remove all
   postLocalHost(newCountry)
   newCountryFormAdd.reset()
+
 })
 
 newCountryFormRemove.addEventListener(`click`, () => {
@@ -152,7 +153,9 @@ newCountryFormRemove.addEventListener(`click`, () => {
 })
 
 
-
+icons.addEventListener(`mouseover`, () => {
+  alert(`Not Today!`)
+})
 
 
 const cleanupSelected = () => {
@@ -166,44 +169,3 @@ const cleanupSelected = () => {
 }
 
 
-
-/*editRamenForm.addEventListener(`submit`, (e) => {
-  e.preventDefault() 
-  let ratingEdit = {
-    rating: e.target.rating.value
-  }
-  let commentEdit = {
-    comment: e.target[`new-comment`].value
-  }
- setRamenRating(ratingEdit.rating)
- setRamenComment(commentEdit.comment)
- petchRamen(ratingEdit.rating, commentEdit.comment)
-})
-
-
-const petchRamen = (ratingEdit, commentEdit) => {
-  fetch(`http://localhost:3000/ramens/${currentId}`, {
-  method: "PATCH",
-  headers: {
-    "Content-type": "application/json"
-  },
-  body: JSON.stringify({
-    rating: ratingEdit,
-    comment: commentEdit
-  })
-  })
-  .then(res => res.json())
-  .then(data => console.log(data))
-}*/
-
-/*
-countryUpdate.addEventListener(`click`, (e) => {
-
-  let ratingEdit = {
-    rating: e.target.rating.value
-  }
-  let commentEdit = {
-    comment: e.target.comment.value
-  }
-  patchLocalHost(ratingEdit.rating, commentEdit.comment)
-})*/

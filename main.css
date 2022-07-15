@@ -51,7 +51,10 @@ header h3, header h4 {
 
 .page-header {
     text-align: center;
-    margin-top: 10%;
+    font-size: 50px;
+    margin-top: 8%;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px rgb(212, 241, 254);
 }
 
 
@@ -66,8 +69,15 @@ header a {
     border-radius: 5px;
     font-size: 12px;
     box-shadow: 1px 1px 3px 1px lightslategray;
+
 } 
  
+a:hover{
+
+    transform: scale(.95);
+    box-shadow: none;
+}
+
 #down {
     
     margin-top: 15%;
@@ -76,7 +86,7 @@ header a {
 
 
 main{
-    background: rgba(255, 255, 255, 0.896);
+    background: rgba(255, 255, 255, 0.848);
     height: 80%;
     display: flex;
     justify-content: space-evenly;
@@ -92,13 +102,39 @@ main{
 
 img{
     width: 400px;
-    height: 400px;
+    height: 300px;
     padding: 10px;
+    box-shadow: 1px 1px 3px 1px lightslategray;
  
 }
 
+
+#comments-display{
+    margin: 100px auto 0 auto;
+    box-shadow: 1px 1px 3px 1px lightslategray;
+    text-align: center;
+    width: 500px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.848);
+    padding: 5px;
+}
+
 footer {
-    height: 60%;   
+    height: 40%; 
+}
+
+#social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 200px 50px 0 50px;
+    font-size: 40px;
+}
+
+i{
+    height: 10px;
+    width: 10px;
+    padding: 0 60px 0 0 ;
+    cursor: pointer;
 }
 
 
@@ -157,3 +193,9 @@ form #add, #remove, #update {
     background: rgba(255, 255, 255, 0.742);
     list-style-type: none;
 }
+
+#add:hover, #remove:hover, #update:hover {
+    transform: scale(.95);
+    box-shadow: none;
+}
+

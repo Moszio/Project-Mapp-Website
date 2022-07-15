@@ -4,10 +4,10 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Project-Mapp</title>
  <link rel="stylesheet" href="./main.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  <script defer src="./index.js"></script>
+ <title>Travel Tracker</title>
 </head>
 <body>
  <header>
@@ -15,49 +15,47 @@
     <h1 class="page-header" >Travel Tracker</h1>
       <div class="style-div">
       <h3>Welcome to Travel tracker!</h3>
-      <h4>Travel tracker will allow you to keep track of the countries you traveled to.<br> You can add and remove destination. Find fun facts about the countries you visited. Add comments and rate your experience.</h4>
+      <h4>Travel tracker will allow you to keep track of the countries you traveled to.<br> You can add and remove destination. Find fun facts about the countries you visited. <br>Or just create a wishlist of countries where you want to go.</h4>
       </div>
-      <div id="down"><a href="#down">Let's Get Started</a></div>
+        <div id="down"><a href="">Let's Get Started</a>
+      </div>
    </div>
  </header>
  <main>
 
-   <form class="form-div">
-      <h3>List of Countries visited</h3>
-      <label for="add-country" name="country">Country:</label><br>
-      <input type="text" name="country"/><br>
-      <label for="add-rating" name="rating">Rating:</label><br>
-      <input type="text" name="rating"/><br>
-      <label for="add-comment" name="comment">Comment:</label><br>
-      <input type="textera" name="comment"/><br>
-      <label for="country-list"></label><br>
-      <input type="submit" id="add" value="+" placeholder="Add"/>
-      <label for="country-list"></label>
-      <input type="submit" id="update" value="Update" placeholder="edit"/>
-      <label for="country-list"></label>
-      <input type="button" id="remove" value="-" placeholder="Remove"/> <br>
-   </form>
-
-
-
- <div  id="img-container">
-   <h3 id="country-select">See the countries you visited before</h3>
+  <form class="form-div">
+    <h3>Add and Remove countries to and from your list</h3>
+    <label for="add-country" name="country">Country:</label><br>
+    <input type="text" name="country"/><br>
+    <label for="add-rating" name="rating">Rating:</label><br>
+    <input type="text" name="rating"/><br>
+    <label for="add-comment" name="comment">Comment:</label><br>
+    <input type="textera" name="comment"/><br>
+    <label for="country-list"></label><br>
+    <input type="submit" id="add" value="+" placeholder="Add"/>
+    <label for="country-list"></label>
+    <input type="submit" id="update" value="Update" placeholder="edit"/>
+    <label for="country-list"></label>
+    <input type="button" id="remove" value="-" placeholder="Remove"/> <br>
+  </form>
+ <div id="img-container">
+   <h3 id="country-select">See the countries you visited before <br>Learn some key information</h3>
    <select name="" id="img-select"> 
    </select><br>
    <img src="" alt=""  id="comments" class="hidden">
-
    <ul id="fun-fact"  class="hidden">
-
    </ul>
  </div>
+
  </main>
+  <div id="comments-display" class="hidden"></div>
 <footer id="footer">
-  <div id="paragraph-comment">
-    <p id="paragraph-section"> </p>
+  <div id="comments"></div>
+  <div id="social-icons">
+    <div class="icons"><i class="fa-brands fa-instagram"></i></div>
+    <div class="icons"><i class="fa-brands fa-facebook-square"></i></div>
+    <div class="icons"><i class="fa-brands fa-snapchat"></i></div>
   </div>
- <h4></h4>
- <h4></h4>
- <h4></h4>
 </footer>
 </body>
 </html>
