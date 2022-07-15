@@ -40,10 +40,12 @@ const fetchLocalHost = () => {
 /* This is to pin comments from countries to thhe website*/
 
 const createElement = (id) => {
-  let p = document.createElement(`p`)
-  p.textContent = id.comment
+  let pComment = document.createElement(`p`)
+  let pRating = document.createElement(`p`)
+  pComment.textContent = id.comment
+  pRating.textContent = id.rating + `/10`
   commentsDispla.innerHTML = ``
-  commentsDispla.append(p)
+  commentsDispla.append(pComment, pRating)
   commentsDispla.classList.remove(`hidden`)
 }
 
@@ -86,6 +88,7 @@ const deleteLocalHost = (id) => {
  .then(res => res.json())
  .then(data => {
   fetchLocalHost()
+  fetchLocalHost2()
   console.log(data)
 })
 }
