@@ -12,7 +12,7 @@ header{
     height: 100%;
     width: 100%;
     background-size: cover;
-    z-index: 15;
+    z-index: 20;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
