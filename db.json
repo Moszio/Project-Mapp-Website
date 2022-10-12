@@ -13,22 +13,10 @@
       "id": 2
     },
     {
-      "country": "Jamaica",
-      "comment": "Jamaica, a Caribbean island nation, has a lush topography of mountains, rainforests and reef-lined beaches. Many of its all-inclusive resorts are clustered in Montego Bay, with its British-colonial architecture, and Negril, known for its diving and snorkeling sites. Jamaica is famed as the birthplace of reggae music, and its capital Kingston is home to the Bob Marley Museum, dedicated to the famous singer.",
+      "country": "Iceland",
+      "comment": "It is like traveling to an other planet",
       "rating": "10",
       "id": 3
-    },
-    {
-      "country": "Iceland",
-      "comment": "Like an other planet",
-      "rating": "10",
-      "id": 4
-    },
-    {
-      "country": "Hungary",
-      "comment": "Home",
-      "rating": "8",
-      "id": 5
     }
   ]
 }
