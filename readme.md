@@ -13,8 +13,17 @@ Start Localhost:
   Start website:
 - explorer.exe index.html
 
+Belove a snapshot of the welcoming page where you can read a small description about the use of the website.
+
 ![WelcomePage](assets/images/start.png)
-![HowToUse](assets/images/use.png)
+
+The use of website in action.
+
+- Add name of country
+- Your rating how much do you want to go there
+- Some description what you did or what you want to do there
+- The user can see some fun facts about the country on right side
+  ![HowToUse](assets/images/use.png)
 
 ## Badges
 
