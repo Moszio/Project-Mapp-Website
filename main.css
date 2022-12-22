@@ -1,201 +1,184 @@
-*   {
-    font-family:Arial, Helvetica, sans-serif;
+* {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/A_large_blank_world_map_with_oceans_marked_in_blue.svg/4500px-A_large_blank_world_map_with_oceans_marked_in_blue.svg.png)
+  scroll-behavior: smooth;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/A_large_blank_world_map_with_oceans_marked_in_blue.svg/4500px-A_large_blank_world_map_with_oceans_marked_in_blue.svg.png);
 }
 
-
-header{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    z-index: 20;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+header {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 
 .header-container {
-    width: 50%;
-    text-align: center;
-    opacity: none;
+  width: 50%;
+  text-align: center;
+  opacity: none;
 }
 
 header h1 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-header h3{
-    margin: 200px 0 0 0;  
-
+header h3 {
+  margin: 200px 0 0 0;
 }
 
-
-header h3, header h4 {
-    z-index: 40;
-    font-size: large;
-    display: flex;
-    justify-content: center;
+header h3,
+header h4 {
+  z-index: 40;
+  font-size: large;
+  display: flex;
+  justify-content: center;
 }
 
 .style-div {
-    height: 200px;
-    background: rgba(255, 255, 255, 0.4)
+  height: 200px;
+  background: rgba(255, 255, 255, 0.4);
 }
-
-
 
 .page-header {
-    text-align: center;
-    font-size: 80px;
-    margin-top: 8%;
-    letter-spacing: 4px;
-    text-shadow: 2px 2px rgb(212, 241, 254);
+  text-align: center;
+  font-size: 80px;
+  margin-top: 8%;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px rgb(212, 241, 254);
 }
 
-
-
 header a {
-    text-decoration: none;
-    color: black;
-    border: none;
-    padding: 9px 18px 9px 18px; 
-    margin: 15px 0 0 0 ;
-    font-weight: bolder;
-    border-radius: 5px;
-    font-size: 12px;
-    box-shadow: 1px 1px 3px 1px lightslategray;
+  text-decoration: none;
+  color: black;
+  border: none;
+  padding: 9px 18px 9px 18px;
+  margin: 15px 0 0 0;
+  font-weight: bolder;
+  border-radius: 5px;
+  font-size: 12px;
+  box-shadow: 1px 1px 3px 1px lightslategray;
+}
 
-} 
- 
-a:hover{
-
-    transform: scale(.95);
-    box-shadow: none;
+a:hover {
+  transform: scale(0.95);
+  box-shadow: none;
 }
 
 #down {
-    
-    margin-top: 15%;
-    padding-bottom: 25%;
-} 
-
-
-main{
-    background: rgba(255, 255, 255, 0.848);
-    height: 80%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction:row;
+  margin-top: 15%;
+  padding-bottom: 25%;
 }
 
-
+main {
+  background: rgba(255, 255, 255, 0.848);
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
 
 #img-container {
-    height: 520px;
-    width: 520px;
+  height: 510px;
+  width: 520px;
 }
 
-img{
-    width: 400px;
-    height: 300px;
-    padding: 10px;
-    box-shadow: 1px 1px 3px 1px lightslategray;
- 
+img {
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px 1px lightslategray;
 }
 
-
-#comments-display{
-    margin: 100px auto 0 auto;
-    box-shadow: 1px 1px 3px 1px lightslategray;
-    text-align: center;
-    width: 500px;
-    border-radius: 5px;
-    background: rgba(234, 224, 224, 0.848);
-    padding: 4px;
+#comments-display {
+  margin: 100px auto 0 auto;
+  box-shadow: 1px 1px 3px 1px lightslategray;
+  text-align: center;
+  width: 500px;
+  border-radius: 5px;
+  background: rgba(234, 224, 224, 0.848);
+  padding: 4px;
 }
 
 footer {
-    height: 40%; 
+  height: 40%;
 }
 
 #social-icons {
-    display: flex;
-    justify-content: center;
-    padding: 200px 50px 0 50px;
-    font-size: 40px;
+  display: flex;
+  justify-content: center;
+  padding: 200px 50px 0 50px;
+  font-size: 40px;
 }
 
-i{
-    height: 10px;
-    width: 10px;
-    padding: 0 60px 0 0 ;
-    cursor: pointer;
+i {
+  height: 10px;
+  width: 10px;
+  padding: 0 60px 0 0;
+  cursor: pointer;
 }
-
 
 input {
-    background-color:rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 18px 36px 18px 36px; 
-    margin: 0 0 40px 0 ;
-    font-weight: bolder;
-    border-radius: 5px;
-    font-size: 18px;
-    box-shadow: 1px 1px 3px 1px lightslategray;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 18px 36px 18px 36px;
+  margin: 0 0 40px 0;
+  font-weight: bolder;
+  border-radius: 5px;
+  font-size: 18px;
+  box-shadow: 1px 1px 3px 1px lightslategray;
 }
 
-
 form {
-    text-align: center;
-
+  text-align: center;
 }
 
 #img-container {
-    width: 420px;
-    height: 420px;
-    text-align: center;
+  width: 420px;
+  height: 420px;
+  text-align: center;
 }
 #img-select {
-    width: 420px;
-    text-align: center;
-    padding: 10px;
-    margin: 5px;
+  width: 420px;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
 }
 
-
-form #add, #remove, #update {
-    cursor: pointer;
-    color: grey;
+form #add,
+#remove,
+#update {
+  cursor: pointer;
+  color: grey;
 }
-
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 #fun-fact {
-    inline-size: 93%;
-    overflow:hidden;
-    color: black;
-    border: none;
-    padding: 9px 18px 9px 18px; 
-    margin: 15px 0 0 0 ;
-    font-weight: bolder;
-    border-radius: 5px;
-    font-size: 17   px;
-    box-shadow: 1px 1px 3px 1px lightslategray;
-    background: rgba(255, 255, 255, 0.742);
-    list-style-type: none;
+  inline-size: 93%;
+  overflow: hidden;
+  color: black;
+  border: none;
+  padding: 9px 18px 9px 18px;
+  margin: 15px 0 0 0;
+  font-weight: bolder;
+  border-radius: 5px;
+  font-size: 17 px;
+  box-shadow: 1px 1px 3px 1px lightslategray;
+  background: rgba(255, 255, 255, 0.742);
+  list-style-type: none;
 }
 
-#add:hover, #remove:hover, #update:hover {
-    transform: scale(.95);
-    box-shadow: none;
+#add:hover,
+#remove:hover,
+#update:hover {
+  transform: scale(0.95);
+  box-shadow: none;
 }
-
